@@ -1,7 +1,6 @@
 import { Paper, EducationData, PORType, ProjectType } from "@/types";
 import ProfilePic from "@/images/dummy.png";
 
-
 export const BIO = {
   name: "Aashruti",
   email: "Lorem@ipsum.com",
@@ -10,8 +9,11 @@ export const BIO = {
 };
 
 export const LINKS = {
-  github: "https://github.com",
-  linkedIn: "https://linkedin.com",
+  github: "https://github.com/aashrutimourya",
+  linkedIn: "https://www.linkedin.com/in/aashruti-138588163/",
+  googleScholar: "https://scholar.google.com/citations?user=fC9e9OEAAAAJ&hl=en",
+  researchGate: "https://www.researchgate.net/profile/Aashruti",
+  twitter: "https://x.com/Itsmehumanalien",
 };
 
 export const PAPERS: Array<Paper> = [

@@ -1,9 +1,10 @@
 "use client";
 
-import { CopyIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import { EducationData, PORType, ProjectType } from "@/types";
 import Link from "next/link";
 import { useState } from "react";
+import Icon from "../Unit/Icon";
+import { faCopy } from "@fortawesome/free-regular-svg-icons";
 
 export const Heading: React.FC<{ text: string }> = ({ text }) => {
   const headingId = text.toLowerCase().replace(" ", "_");
@@ -16,11 +17,7 @@ export const Heading: React.FC<{ text: string }> = ({ text }) => {
     <div className="md:text-4xl text-2xl cursor-pointer" id={headingId}>
       <h2 className=" group flex flex-row gap-4 items-baseline" onClick={copy}>
         {text}
-        <CopyIcon
-          width={25}
-          height={25}
-          className="group-hover:visible invisible"
-        />
+        <Icon src={faCopy} />
       </h2>
       <Separator />
     </div>
@@ -94,7 +91,7 @@ const ExternalLink: React.FC<{ href: string }> = ({ href }) => {
     <div>
       <Link href={href} target="_blank" rel="noreferrer noopener">
         <p className="text-xs md:text-base flex flex-row gap-1 items-center text-blue-400">
-          Ref. {<ExternalLinkIcon />}
+          Ref. {}
         </p>
       </Link>
     </div>

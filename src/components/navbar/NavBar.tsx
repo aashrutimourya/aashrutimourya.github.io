@@ -1,8 +1,10 @@
 "use client";
-import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
+// import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Icon from "../Unit/Icon";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 interface NavBarLinks {
   href: string;
@@ -65,7 +67,7 @@ const Drawer: React.FC<DrawerProps> = ({ onClose, open }) => {
 
   return (
     <div className="absolute flex flex-column h-[100vh] w-[100vw] justify-center items-center z-40 top-0 left-0 glass">
-      <MobileMenuButton onClick={onClose} icon={<Cross1Icon />} />
+      <MobileMenuButton onClick={onClose} icon={<Icon src={faXmark} />} />
       <div className="absolute flex flex-col gap-4 top-1/3">
         {NAV_BAR_LINKS.map((link) => (
           <div onClick={onClose} key={link.href}>
@@ -82,7 +84,7 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({
   icon,
 }) => {
   return (
-    <button className="absolute top-0 right-0 mr-4 mt-6 z-50" onClick={onClick}>
+    <button className="absolute top-0 right-0 mr-4 mt-4 z-50" onClick={onClick}>
       {icon}
     </button>
   );
@@ -97,7 +99,7 @@ const MobileMenu = () => {
   return (
     <div className="md:hidden flex visible md:w-0 w-auto">
       {!isOpen ? (
-        <MobileMenuButton onClick={toggleDrawer} icon={<HamburgerMenuIcon />} />
+        <MobileMenuButton onClick={toggleDrawer} icon={<Icon src={faBars} />} />
       ) : null}
       <Drawer onClose={toggleDrawer} open={isOpen} />
     </div>
