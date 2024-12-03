@@ -49,13 +49,13 @@ const NavBarLink: React.FC<NavBarLinkProps> = ({
   const isActive = pathname === href;
   return (
     <Link href={href}>
-      <p
+      <span
         className={`font-sans text-lg font-semibold hover:animate-hover-scale ${
           mobile ? "" : "md:w-[100px] w-0"
         } ${isActive ? "opacity-100" : "opacity-50"}`}
       >
         {label}
-      </p>
+      </span>
     </Link>
   );
 };
@@ -84,7 +84,11 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({
   icon,
 }) => {
   return (
-    <button className="absolute top-0 right-0 mr-4 mt-4 z-50" onClick={onClick}>
+    <button
+      className="absolute top-0 right-0 mr-4 mt-4 z-50"
+      onClick={onClick}
+      name="mobileMenuButton"
+    >
       {icon}
     </button>
   );
@@ -119,19 +123,19 @@ const DesktopLinks = () => {
 const NavBar = () => {
   return (
     <>
-      <div className="w-full absolute top-0 z-10 min-h-8 flex flex-row items-center justify-between md:px-8 py-4 px-4">
+      <nav className="w-full absolute top-0 z-10 min-h-8 flex flex-row items-center justify-between md:px-8 py-4 px-4">
         <Link href="/">
           <div className="flex md:flex-row flex-col md:items-center md:gap-6">
-            <p className="font-mono md:text-xl text-lg font-bold">
+            <span className="font-mono md:text-xl text-lg font-bold">
               Aashruti Maurya
-            </p>
-            <p className=" md:flex hidden font-sans text-xs font-semibold">
+            </span>
+            <span className=" md:flex hidden font-sans text-xs font-semibold">
               PhD Scholar @ IISC
-            </p>
+            </span>
           </div>
         </Link>
         <DesktopLinks />
-      </div>
+      </nav>
       <MobileMenu />
     </>
   );

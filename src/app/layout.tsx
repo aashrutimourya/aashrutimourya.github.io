@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "@/components/navbar/NavBar";
 import Footer from "@/components/footer/footer";
-import { BIO } from "@/utils/consts";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,7 +17,29 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Aashruti",
-  description: BIO.intro,
+  description:
+    "A PhD scholar at IISC Bangalore specializing in Geodynamics and Seismic Anisotropy",
+  keywords: [
+    "Aashruti Phd scholar IISC Bangalore",
+    "IISC Bangalore PhD",
+    "Geodynamics",
+    "Seismic Anisotropy",
+    "Resume",
+    "Research",
+  ],
+  openGraph: {
+    title: "Aashruti",
+    description:
+      "A PhD scholar at IISC Bangalore specializing in Geodynamics and Seismic Anisotropy",
+    url: "https://aashrutimourya.github.io/",
+    type: "website",
+    images: {
+      url: "https://aashrutimourya.github.io/image.png",
+      width: 500,
+      height: 400,
+      alt: "Aashruti @ IISC Bangalore",
+    },
+  },
 };
 
 export default function RootLayout({
