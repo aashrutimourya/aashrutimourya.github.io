@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Bio from "@/components/bio/Bio";
-import ResponsiveImage from "@/components/Unit/ResponsiveImage";
 import { motion } from "framer-motion";
-import ProfilePic from "@/images/dummy.png";
+import ProfilePic from "@/images/desktop_profile.png";
 
 export default function Home() {
   return (
@@ -18,13 +18,11 @@ export default function Home() {
               ease: "easeInOut",
             }}
           >
-            <ResponsiveImage
-              src={ProfilePic.src}
-              alt="Aashruti Maurya profile picture"
-              className="rounded-full"
-              width={400}
-              height={400}
-              mobile={{ width: 200, height: 200 }}
+            <Image
+              className={"rounded-full profilePic"}
+              src={ProfilePic}
+              alt={"Aasurti's profile pic"}
+              sizes="(max-width: 768px) 200px, 400px"
             />
           </motion.div>
           <motion.div

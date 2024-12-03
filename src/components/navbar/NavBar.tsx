@@ -87,7 +87,7 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({
     <button
       className="absolute top-0 right-0 mr-4 mt-4 z-50"
       onClick={onClick}
-      name="mobileMenuButton"
+      aria-labelledby="mobileMenuButton"
     >
       {icon}
     </button>

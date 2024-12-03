@@ -27,8 +27,8 @@ body {
   width: 20px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #FFF;
-  box-shadow: 0 0 0 0 #FFF4;
+  background: #fff;
+  box-shadow: 0 0 0 0 #fff4;
   animation: loading 1.5s infinite linear;
   position: relative;
 }
@@ -39,7 +39,7 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  box-shadow: 0 0 0 0 #FFF4;
+  box-shadow: 0 0 0 0 #fff4;
   animation: inherit;
   animation-delay: -0.5s;
 }
@@ -49,5 +49,19 @@ body {
 }
 
 @keyframes loading {
-    100% {box-shadow: 0 0 0 40px #FFF0}
+  100% {
+    box-shadow: 0 0 0 40px #fff0;
+  }
+}
+
+.profilePic {
+  width: 400px;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .profilePic {
+    width: 200px;
+    height: 200px;
+  }
 }

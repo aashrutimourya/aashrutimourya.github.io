@@ -45,7 +45,7 @@ const Footer = () => {
             icon={<Icon src={faLinkedinIn} />}
           />
           <FooterLink
-            label=""
+            label="X"
             link={LINKS.twitter}
             icon={<Icon src={faXTwitter} />}
           />
